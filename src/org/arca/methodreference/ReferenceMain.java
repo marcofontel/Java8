@@ -16,15 +16,13 @@ public class ReferenceMain {
 		test1();
 		
 	}	
-	
-
 	static void test1() {
 		FazAlgo faz = TipoAlgo::new;
 		faz.fazAlgo(10.9, 34.8);
 	}
 	static void test2() {
-		TipoAlgo tipoAlgo = new TipoAlgo();
-		FazAlgo faz = tipoAlgo::fazAlgumaCoisaR;
+		FazAlgo faz = TipoAlgo::new;
+		//FazAlgo faz = tipoAlgo::fazAlgumaCoisaR;
 		faz.fazAlgo(22.33, 11.33);
 		
 	}
