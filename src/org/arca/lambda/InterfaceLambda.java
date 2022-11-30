@@ -29,6 +29,9 @@ interface Padrao {
 		this.preco = preco;
 	}	
 	
+	 public void imprime() {
+		 System.out.println("Nome: " +getNome() +" Preço: "+getPreco() );
+	
  }
  
  class Impressora{
@@ -59,19 +62,21 @@ public class InterfaceLambda {
 		//lista.forEach(a->System.out.println(a.getNome() + " " + a.getPreco()));
 		
 		// Metodo estatico
-		lista.forEach(Impressora::imprime);
+		//lista.forEach(Impressora::imprime);
 		/*
 		 * Multiplos metodos
 		 */
-		lista.forEach((p) -> {
+		//lista.forEach((p) -> {
 			//System.out.println(p.getNome());
 			//System.out.println(p.getPreco());
-		});
+		//});
+		lista.forEach(Produto::imprime);
 	}
 	
 	static void interfacePadrao(){
 		Padrao p1 = () -> System.out.println("Faz Alguma coisa");
 		p1.fazAlgo();
+		}
 	}
 }
 
