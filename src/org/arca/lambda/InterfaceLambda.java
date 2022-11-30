@@ -31,6 +31,12 @@ interface Padrao {
 	
  }
  
+ class Impressora{
+	 public static void imprime(Produto p) {
+		 System.out.println("Nome: " +p.getNome() +" Preço: "+p.getPreco() );
+	 }
+ }
+ 
 public class InterfaceLambda {
 
 	public static void main(String[] args) {	
@@ -50,14 +56,16 @@ public class InterfaceLambda {
 		lista.sort(( p1, p2)->p1.getPreco().compareTo(p2.getPreco()));
 		
 		// Expressão lambda
-		lista.forEach(a->System.out.println(a.getNome() + " " + a.getPreco()));
+		//lista.forEach(a->System.out.println(a.getNome() + " " + a.getPreco()));
 		
+		// Metodo estatico
+		lista.forEach(Impressora::imprime);
 		/*
 		 * Multiplos metodos
 		 */
 		lista.forEach((p) -> {
-			System.out.println(p.getNome());
-			System.out.println(p.getPreco());
+			//System.out.println(p.getNome());
+			//System.out.println(p.getPreco());
 		});
 	}
 	
