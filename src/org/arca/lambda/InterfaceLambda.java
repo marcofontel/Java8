@@ -46,9 +46,11 @@ public class InterfaceLambda {
 		lista.add(new Produto("Tv","1"));
 		lista.add(new Produto("Mesa","2"));
 		
-		
+		// Exibe por ordem maior a menor
 		lista.sort(( p1, p2)->p1.getPreco().compareTo(p2.getPreco()));
-		//lista.forEach(a->System.out.println(a.getNome() + " " + a.getPreco()));
+		
+		// Expressão lambda
+		lista.forEach(a->System.out.println(a.getNome() + " " + a.getPreco()));
 		
 		/*
 		 * Multiplos metodos
