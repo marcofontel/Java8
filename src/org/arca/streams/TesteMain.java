@@ -19,8 +19,10 @@ public class TesteMain {
 		prod.add(new Produto("Geladeira 650l","300"));
 
 
-		prod.stream().filter(p->p.getNome().contains("Geladeira")).sorted((p1,p2) -> p1.getPreco().compareTo(p2.getPreco())).toList().forEach(pp-> System.out.println(pp.getNome()));
-	}
+		//Usando map e method references
+		
+		prod.stream().filter(p->p.getNome().contains("Geladeira")).sorted((p1,p3)->p1.getPreco().compareTo(p3.getPreco())).map(p->p.getNome().toUpperCase()).forEach(System.out::println);
+	} 
 	
 }
 
