@@ -11,30 +11,16 @@ public class TesteMain {
 
 	public static void main(String[] args) {
 		List<Produto> prod = new ArrayList<>();
-		prod.add(new Produto("Geladeira","100"));
+		prod.add(new Produto("Geladeira 500l","100"));
 		prod.add(new Produto("Fogao","300"));
 		prod.add(new Produto("Microondas","150"));
 		prod.add(new Produto("Armario","350"));
-		prod.add(new Produto("Geladeira","256"));
-		prod.add(new Produto("Geladeira","300"));
+		prod.add(new Produto("Geladeira 150l","256"));
+		prod.add(new Produto("Geladeira 650l","300"));
 
-		Collections.sort(prod, new ProdutoComparador());
 
-		for(Produto p: prod){
-			if(p.getNome().contains("Geladeira")) {
-				System.out.println(p.getNome()+" "+p.getPreco());
-			}
-		}
-	
+		prod.stream().filter(p->p.getNome().contains("Geladeira")).sorted((p1,p2) -> p1.getPreco().compareTo(p2.getPreco())).toList().forEach(pp-> System.out.println(pp.getNome()));
 	}
 	
 }
-class ProdutoComparador implements Comparator<Produto> {
-	
-	@Override
-	public int compare(Produto p1, Produto p2) {
-		
-		return p1.getPreco().compareTo(p2.getPreco());
-	}
-	
-}
+
