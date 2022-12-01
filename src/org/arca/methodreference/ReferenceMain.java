@@ -1,5 +1,6 @@
 package org.arca.methodreference;
 
+@FunctionalInterface
 interface FazAlgo{
 	TipoAlgo fazAlgo(Double l, Double a);
 	
@@ -11,7 +12,6 @@ class TipoAlgo{
 	}
 }
 public class ReferenceMain {
-	
 	public static void main(String[] args) {
 		test1();
 		

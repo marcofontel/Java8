@@ -8,31 +8,6 @@ interface Padrao {
 	 
 }
  
- class Produto{
-	 private String nome;
-	 private String preco;
-	public Produto(String nome, String preco) {
-		super();
-		this.nome = nome;
-		this.preco = preco;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getPreco() {
-		return preco;
-	}
-	public void setPreco(String preco) {
-		this.preco = preco;
-	}	
-	
-	 public void imprime() {
-		 System.out.println("Nome: " +getNome() +" Preço: "+getPreco() );
-	
- }
  
  class Impressora{
 	 public static void imprime(Produto p) {
@@ -78,5 +53,4 @@ public class InterfaceLambda {
 		p1.fazAlgo();
 		}
 	}
-}
 
