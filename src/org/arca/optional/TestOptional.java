@@ -19,10 +19,11 @@ public class TestOptional {
 		cursoAdm.getListaAluno().add(Ana);
 		
 		Aluno paulo = new Aluno("Paulo");
-		paulo.setMatricula(new Matricula("1400"));
+		//paulo.setMatricula(new Matricula("1400"));
 		cursoAdm.getListaAluno().add(paulo);
 		
-		cursoAdm.getListaAluno().forEach(a->System.out.println(a.getNome() + " "+a.getMatricula().getNumero()));
+		cursoAdm.getListaAluno().stream().filter(a->a.getMatricula().isPresent())
+		.forEach(a->System.out.println(a.getNome() + " "+a.getMatricula().get().getNumero()));
 		
 	}
 }
