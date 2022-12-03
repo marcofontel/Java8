@@ -1,5 +1,9 @@
 package org.arca.lambda;
 
+import org.arca.annotations.Voltagem;
+
+@Voltagem(tensao = "110")
+@Voltagem(tensao = "220")
 public class Produto{
 	 private String nome;
 	 private String preco;
@@ -25,3 +29,9 @@ public class Produto{
 		 System.out.println("Nome: " +getNome() +" Preço: "+getPreco() );
 	 }	
 }
+
+ 
+ 
+ 
+ 
+ 
